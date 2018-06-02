@@ -35,7 +35,7 @@ function getSearchFailure (message) {
 
 export function search (search, colour)  {
   return (dispatch, getState) => {
-    dispatch(getSearchRequest(search))
+    dispatch(getSearchRequest(search, colour))
 
     const payload = {
       search,
