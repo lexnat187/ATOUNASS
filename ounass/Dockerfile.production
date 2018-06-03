@@ -1,7 +1,6 @@
-FROM node:8.4-alpine
-RUN apk add --no-cache bash git
+FROM node:8.11.2
 
-EXPOSE 3002
+EXPOSE 3000
 CMD ["yarn", "start"]
 
 RUN mkdir -p /opt/app
