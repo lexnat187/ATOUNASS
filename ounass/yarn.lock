@@ -59,6 +59,17 @@
   dependencies:
     csstype "^2.2.0"
 
+"ATCOMMON@https://github.com/lexnat187/ATCOMMON.git":
+  version "1.0.0"
+  resolved "https://github.com/lexnat187/ATCOMMON.git#5e3a778d4f88dee94ff7af127f02e8794a2a9c35"
+  dependencies:
+    "@material-ui/core" "^1.1.0"
+    prop-types "^15.6.1"
+    react "^16.4.0"
+    react-redux "^5.0.7"
+    react-responsive "^4.1.0"
+    redux "^4.0.0"
+
 abab@^1.0.3:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/abab/-/abab-1.0.4.tgz#5faad9c2c07f60dd76770f71cf025b62a63cfd4e"
