@@ -5,8 +5,7 @@ import {
   GET_FILTER_FAILURE
 } from './types'
 
-const baseURL = 'http://localhost:3003/'
-const brand = 'ounassfacets'
+import { baseAPIURL, brandFacets } from '../config'
 
 function getFilterRequest () {
   return {
@@ -35,26 +34,7 @@ export function getFilters ()  {
   return (dispatch, getState) => {
     dispatch(getFilterRequest())
 
-    //localhost:3003/search/ounasssearch
-    // try{
-    //     let response = fetch(
-            // `${baseURL}search/${brand}`,
-            // {
-            //     Method: 'GET',
-            //     headers: {
-            //         'Content-Type': 'application/json'
-            //     }
-            // }
-    //     )
-    //     let resJson = response.json()
-    //     dispatch(getFilterSuccess(resJson))
-    // } catch(error) {
-    //     console.log('ERROR' + error)
-    //     dispatch(getFilterFailure(error))
-    // }
-
-    
-    return fetch( `${baseURL}search/${brand}`,
+    return fetch( `${baseAPIURL}search/${brandFacets}`,
             {
                 method: 'GET',
                 headers: {
@@ -68,20 +48,5 @@ export function getFilters ()  {
       .then(json =>
             dispatch(getFilterSuccess(json))
       )
-
-    // return dispatch(fetch(
-    //     `${baseURL}search/${brand}`,
-    //     {
-    //         Method: 'GET',
-    //         headers: {
-    //             'Content-Type': 'application/json'
-    //         }
-    //     }
-    // ))
-    //   .then(result => {
-    //     dispatch(getFilterSuccess(result))
-    //   })
-    //   .catch(err => dispatch(getFilterFailure(err))
-    // )
   }
 }
