@@ -1,6 +1,6 @@
 import {GET_FILTER_REQUEST, GET_FILTER_SUCCESS, GET_FILTER_FAILURE} from '../actions/types'
 
-// The search reducer.
+// The filters reducer.
 export default function filters (state = {}, action) {
   switch (action.type) {
     case GET_FILTER_REQUEST:

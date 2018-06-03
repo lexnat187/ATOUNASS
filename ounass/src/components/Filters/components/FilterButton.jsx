@@ -26,7 +26,6 @@ class FilterButton extends Component {
     render () {
         const { colourKey, colour, index } = this.props
 
-        // console.log('rendering button: ' + colour)
         return(
             <button 
                 key={index}
@@ -44,9 +43,8 @@ class FilterButton extends Component {
 }
 
 FilterButton.propTypes = {
-        searchQuery: PropTypes.string,
-    //   notification: PropTypes.object,
-        search: PropTypes.func.isRequired
-    }
+    searchQuery: PropTypes.string,
+    search: PropTypes.func.isRequired
+}
     
 export default FilterButton

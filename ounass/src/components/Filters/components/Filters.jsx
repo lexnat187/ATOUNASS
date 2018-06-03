@@ -1,4 +1,3 @@
-// import Snackbar from 'material-ui/Snackbar'
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
@@ -74,7 +73,7 @@ class Filters extends Component {
 
 Filters.propTypes = {
     filterResult: PropTypes.string,
-//   actions:  search: PropTypes.func.isRequired
+    getFilters: PropTypes.func.isRequired
 }
 
 export default Filters

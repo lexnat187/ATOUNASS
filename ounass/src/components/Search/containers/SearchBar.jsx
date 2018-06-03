@@ -2,7 +2,6 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
 import { SearchBar } from 'ATCOMMON'
-
 import { search } from '../../../actions'
 
 const mapStateToProps = (state) => ({
