@@ -23,6 +23,14 @@ yarn start
 ```
 
 
+## Docker
+
+This repositories have been dockerised and can be built by running the docker build command within the mandp directory
+
+```
+docker build --file ./Dockerfile.production --tag at-ounass .
+```
+
 ## Author
 
 * **Alexander Walker**
