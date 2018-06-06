@@ -40,9 +40,8 @@ function toTitleCase(str) {
 }
 
 export function search (search, colour)  {
-  return (dispatch, getState) => {
+  return async (dispatch, getState) => {
     dispatch(getSearchRequest(search, colour))
-
     
     const payload = {
       search: toTitleCase(search),
@@ -50,20 +49,18 @@ export function search (search, colour)  {
     }
 
     let myHeaders = new Headers()
-
     myHeaders.append('Content-Type', 'application/json')
 
-    return fetch( `${baseAPIURL}search/${brandSearch}`,
-      {
-          method: 'POST',
-          headers: myHeaders,
-          body: JSON.stringify(payload)
+    try {
+      let response = await fetch( `${baseAPIURL}search/${brandSearch}`, {
+            method: 'POST',
+            headers: myHeaders,
+            body: JSON.stringify(payload)
       })
-      .then(
-        response => response.json(),
-        error => dispatch(getSearchFailure(error))
-      )
-      .then(json => dispatch(getSearchSuccess(json))
-      )
+      let responseJson = await response.json()
+      dispatch(getSearchSuccess(responseJson))
+    } catch (error) {
+      dispatch(getSearchFailure(error))
+    }
   }
 }

@@ -9,7 +9,7 @@ export default function filters (state = {}, action) {
       })
     case GET_FILTER_SUCCESS:
       return Object.assign({}, state, {
-        error: '', searchText: '', filterResult: JSON.parse(action.filterResult)
+        error: '', searchText: '', filterResult: action.filterResult
       })
     case GET_FILTER_FAILURE:
       return Object.assign({}, state, {

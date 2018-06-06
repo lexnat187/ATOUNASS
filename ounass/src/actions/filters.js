@@ -31,22 +31,20 @@ function getFilterFailure (message) {
 }
 
 export function getFilters ()  {
-  return (dispatch, getState) => {
+  return async (dispatch, getState) => {
     dispatch(getFilterRequest())
 
-    return fetch( `${baseAPIURL}search/${brandFacets}`,
-            {
-                method: 'GET',
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            })
-      .then(
-        response => response.json(),
-        error => dispatch(getFilterFailure(error)) 
-      )
-      .then(json =>
-            dispatch(getFilterSuccess(json))
-      )
+    try {
+      let response = await fetch( `${baseAPIURL}search/${brandFacets}`, {
+            method: 'GET',
+            headers:  {
+              'Content-Type': 'application/json'
+            }
+      })
+      let responseJson = await response.json()
+      dispatch(getFilterSuccess(responseJson))
+    } catch (error) {
+      dispatch(getFilterFailure(error))
+    }
   }
 }
