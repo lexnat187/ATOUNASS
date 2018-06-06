@@ -5,7 +5,7 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^1.1.0",
-    "ATCOMMON": "git+https://git@github.com/lexnat187/ATCOMMON.git", 
+    "ATCOMMON": "git+https://git@github.com/lexnat187/ATCOMMON.git#ATC-001", 
     "material-ui-search-bar": "^1.0.0-beta.4",
     "prop-types": "^15.6.1",
     "react": "^16.4.0",

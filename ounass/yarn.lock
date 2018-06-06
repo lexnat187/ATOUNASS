@@ -187,9 +187,9 @@
     "@webassemblyjs/wast-parser" "1.5.9"
     long "^3.2.0"
 
-"ATCOMMON@git+https://git@github.com/lexnat187/ATCOMMON.git":
+"ATCOMMON@git+https://git@github.com/lexnat187/ATCOMMON.git#ATC-001":
   version "1.0.0"
-  resolved "git+https://git@github.com/lexnat187/ATCOMMON.git#5e3a778d4f88dee94ff7af127f02e8794a2a9c35"
+  resolved "git+https://git@github.com/lexnat187/ATCOMMON.git#8059723f29857818dd52b296fc266f3617b98a42"
   dependencies:
     "@material-ui/core" "^1.1.0"
     prop-types "^15.6.1"
