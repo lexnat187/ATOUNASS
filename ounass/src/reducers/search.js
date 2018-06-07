@@ -13,7 +13,7 @@ export default function search (state = {}, action) {
       })
     case GET_SEARCH_SUCCESS:
       return Object.assign({}, state, {
-        error: '', searchText: '', searchResult: JSON.parse(action.searchResult)
+        error: '', searchText: '', searchResult: action.searchResult
       })
     case GET_SEARCH_FAILURE:
       return Object.assign({}, state, {
