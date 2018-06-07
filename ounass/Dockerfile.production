@@ -9,7 +9,7 @@ WORKDIR /opt/app
 COPY package.json /opt/app
 COPY yarn.lock /opt/app
 RUN yarn global add serve
-RUN yarn install
+RUN yarn install --network-concurrency 1
 
 COPY . /opt/app
 RUN yarn build
